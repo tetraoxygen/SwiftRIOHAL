@@ -1,0 +1,1 @@
+../../../../../allwpilib/hal/src/main/native/include/hal/I2CTypes.h
