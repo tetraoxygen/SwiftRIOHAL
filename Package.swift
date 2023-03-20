@@ -23,7 +23,13 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "CRIOHAL", linkerSettings: [
+        .target(name: "CRIOHAL", cxxSettings: [
+            .headerSearchPath("../../allwpilib/wpiutil/src/main/native/include"),
+            .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/llvm/include"),
+            .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/fmtlib/include"),
+            .headerSearchPath("Implementation/athenaincludes"),
+//            .headerSearchPath("../../arm-nilrt-linux-gnueabi/sysroot/usr/include/arm-nilrt-linux-gnueabi"),
+            .headerSearchPath("../../ni-libraries/src/include"),
         ]),
         .target(
             name: "SwiftRIOHAL",
@@ -33,5 +39,7 @@ let package = Package(
         .testTarget(
             name: "SwiftRIOHALTests",
             dependencies: ["SwiftRIOHAL"]),
-    ]
+    ],
+    cLanguageStandard: .c11,
+    cxxLanguageStandard: .gnucxx20
 )
