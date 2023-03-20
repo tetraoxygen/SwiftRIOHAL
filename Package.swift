@@ -27,8 +27,8 @@ let package = Package(
             .headerSearchPath("../../allwpilib/wpiutil/src/main/native/include"),
             .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/llvm/include"),
             .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/fmtlib/include"),
-            .headerSearchPath("Implementation/athenaincludes"),
             .headerSearchPath("../../ni-libraries/src/include"),
+            .headerSearchPath("Implementation/athenaincludes"),
         ]),
         .target(
             name: "SwiftRIOHAL",
