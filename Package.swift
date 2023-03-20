@@ -28,7 +28,6 @@ let package = Package(
             .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/llvm/include"),
             .headerSearchPath("../../allwpilib/wpiutil/src/main/native/thirdparty/fmtlib/include"),
             .headerSearchPath("Implementation/athenaincludes"),
-//            .headerSearchPath("../../arm-nilrt-linux-gnueabi/sysroot/usr/include/arm-nilrt-linux-gnueabi"),
             .headerSearchPath("../../ni-libraries/src/include"),
         ]),
         .target(
