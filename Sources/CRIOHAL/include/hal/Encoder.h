@@ -1,1 +1,1 @@
-../../../../../allwpilib/hal/src/main/native/include/hal/Encoder.h
+../../../../allwpilib/hal/src/main/native/include/hal/Encoder.h

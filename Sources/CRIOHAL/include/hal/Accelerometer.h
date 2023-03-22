@@ -1,1 +1,1 @@
-../../../../../allwpilib/hal/src/main/native/include/hal/Accelerometer.h
+../../../../allwpilib/hal/src/main/native/include/hal/Accelerometer.h

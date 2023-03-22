@@ -1,4 +1,5 @@
 import CRIOHAL
+import Foundation
 
 enum DriverStationMode {
     case disabled
@@ -9,7 +10,7 @@ enum DriverStationMode {
 
 func getDriverStationMode() -> DriverStationMode {
     var word = HAL_ControlWord()
-    HAL_GetControlWord(&word);
+    HAL_GetControlWord(&word)
 
     guard word.enabled !=  0 else {
         HAL_ObserveUserProgramDisabled()
@@ -26,4 +27,32 @@ func getDriverStationMode() -> DriverStationMode {
         HAL_ObserveUserProgramTeleop()
         return .teleop
     }
+}
+
+/// Prints the control word.
+func printControlWord() {
+    var word = HAL_ControlWord()
+    HAL_GetControlWord(&word)
+
+    print(word)
+}
+
+actor DriverStationManager {
+    var mode: DriverStationMode = .disabled
+
+    var managementTask: Task<Void, any Error>?
+
+    func startManagement() {
+        // Might want to revisit the priority on this
+        let bgTask = Task(priority: .background) {
+            while true {
+                guard !Task.isCancelled else {
+                    break
+                }
+                // babysit the RIO
+                try await Task.sleep(for: .milliseconds(40))
+            }
+        }
+    }
+
 }

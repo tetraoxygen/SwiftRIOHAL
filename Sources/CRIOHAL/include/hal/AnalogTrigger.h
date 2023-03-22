@@ -1,1 +1,1 @@
-../../../../../allwpilib/hal/src/main/native/include/hal/AnalogTrigger.h
+../../../../allwpilib/hal/src/main/native/include/hal/AnalogTrigger.h

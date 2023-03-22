@@ -1,1 +1,1 @@
-../../../../../allwpilib/hal/src/main/native/include/hal/AnalogGyro.h
+../../../../allwpilib/hal/src/main/native/include/hal/AnalogGyro.h
