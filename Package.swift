@@ -37,7 +37,13 @@ let package = Package(
             name: "SwiftRIOHAL",
             dependencies: [
                 "CRIOHAL"
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags([
+                    "-static-stdlib"
+                ])
+            ]
+        ),
         .testTarget(
             name: "SwiftRIOHALTests",
             dependencies: ["SwiftRIOHAL"]),

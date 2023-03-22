@@ -1,3 +1,6 @@
 [submodule "ni-libraries"]
 	path = ni-libraries
 	url = https://github.com/wpilibsuite/ni-libraries
+[submodule "allwpilib"]
+	path = allwpilib
+	url = https://github.com/tetraoxygen/RIOHAL
